@@ -21,7 +21,7 @@ function App() {
   const [brand, setBrand] = useState ('');
   const [units, setUnits] = useState ('');
   const [quantity, setQuantity] = useState (0);
-  const [isPurchased, setIsPurchased] = useState (false);
+  const [isPurchased, setIsPurchased] = useState ('false');
 
   const handleSubmit =(e) => {
     e.preventDefault();
@@ -39,7 +39,7 @@ function App() {
     setBrand('');
     setUnits('');
     setQuantity('');
-    setIsPurchased('');
+    setIsPurchased('false');
   }
 
   // saving data to local storage
@@ -75,12 +75,12 @@ function App() {
             <input type="text" className="form-control" 
               onChange={(e) => setQuantity(e.target.value)} value={quantity}
             />
-            <br />
-            {/* <label htmlFor="isPurchased">isPurchased</label>
-            <input type="checkbox" className="checkbox" 
+            {/* <br />
+            <label htmlFor="isPurchased">Purchased</label>
+            <input type="text" className="checkbox" 
                onChange={(e) => setIsPurchased(e.target.value)} 
-            />
-            <br /> */}
+            /> */}
+            <br />
             <button value="submit" className='btn btn-success btn-md'> ADD</button>
 
 
@@ -94,9 +94,10 @@ function App() {
               <thead>
                 <tr>
                   <th>Item</th>
-                  <th> brand</th>
-                  <th>units</th>
-                  <th>quantity</th>
+                  <th> Brand</th>
+                  <th>Units</th>
+                  <th>Quantity</th>
+                  <th>Purchased</th>
                   <th>delete</th>                    
                  
                 </tr>
