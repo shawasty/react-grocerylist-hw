@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import View from './components/View';
 
 const getDatafromLS = () => {
   const data = localStorage.getItem('books');
@@ -75,11 +76,11 @@ function App() {
               onChange={(e) => setQuantity(e.target.value)} value={quantity}
             />
             <br />
-            <label htmlFor="isPurchased">isPurchased</label>
+            {/* <label htmlFor="isPurchased">isPurchased</label>
             <input type="checkbox" className="checkbox" 
                onChange={(e) => setIsPurchased(e.target.value)} 
             />
-            <br />
+            <br /> */}
             <button value="submit" className='btn btn-success btn-md'> ADD</button>
 
 
@@ -99,6 +100,9 @@ function App() {
                   <th>delete</th>                    
                  
                 </tr>
+              </thead>
+              <thead>
+                <View groceries={groceries}/>
               </thead>
             </table>
             
