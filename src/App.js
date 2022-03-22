@@ -41,6 +41,20 @@ function App() {
     setQuantity('');
     setIsPurchased('false');
   }
+  // delete grocery item
+    const deleteGrocery = (isPurchased)=>{
+      if(isPurchased){
+        return !isPurchased
+      }
+     const filterGrocery = groceries.filter((element,index)=>{
+       return element.isPurchased !== isPurchased
+     })
+     setGroceries(filterGrocery)
+
+    //  console.log(toggle)
+    }
+
+
 
   // saving data to local storage
   useEffect(()=>{
@@ -103,12 +117,12 @@ function App() {
                 </tr>
               </thead>
               <thead>
-                <View groceries={groceries}/>
+                <View groceries={groceries} deleteGrocery={deleteGrocery}/>
               </thead>
             </table>
             
           </div>
-
+            <button className="btn btn-danger btn-md ">Remove All</button>
           </>}
           
           {groceries.length <= 0 && <div> No groceries are added yet</div>}

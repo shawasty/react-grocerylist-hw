@@ -10,7 +10,7 @@ const View = ({groceries,deleteGrocery }) => {
             <td>{grocery.quantity}</td>
             <td>{grocery.isPurchased}</td>
             <td className='delete-btn' 
-            onClick={()=>deleteGrocery(grocery.item)}>
+            onClick={()=>deleteGrocery(grocery.isPurchased)}>
                 <FaTrashAlt/>
             </td>
 
