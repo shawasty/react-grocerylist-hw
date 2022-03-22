@@ -3,7 +3,7 @@ import './App.css';
 import View from './components/View';
 
 const getDatafromLS = () => {
-  const data = localStorage.getItem('books');
+  const data = localStorage.getItem('groceries');
   if(data){
     return JSON.parse(data);
   }
