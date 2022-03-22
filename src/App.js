@@ -87,8 +87,27 @@ function App() {
 
         </div>
         <div className="view-container">
-          {groceries.length < 1 && <div> No groceries are added yet</div>}
-        </div>
+          {groceries.length>=0&& <>
+          <div className="table-responsive">
+          <table className="table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th> brand</th>
+                  <th>units</th>
+                  <th>quantity</th>
+                  <th>delete</th>                    
+                 
+                </tr>
+              </thead>
+            </table>
+            
+          </div>
+
+          </>}
+          
+          {groceries.length <= 0 && <div> No groceries are added yet</div>}
+          </div>
       </div>
      
     </div>
