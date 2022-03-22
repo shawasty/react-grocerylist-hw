@@ -33,7 +33,7 @@
 
 .wrapper .form-container{
     width: 500px;
-    height: 440px;
+    height: 550px;
     background-color: #d6e2e1;
     margin: 20px auto;
     padding: 20px;
@@ -41,7 +41,8 @@
 }
 
 .wrapper .form-container .btn{
-    width: 100%;  
+    width: 100%; 
+    margin-top: 30px; 
 }
 
 .wrapper .view-container{
@@ -61,4 +62,11 @@
 
 tbody{
     margin-top: 25px;
+}
+label{
+  font-weight: bold;
+  margin: 10px;
+}
+form{
+  border-radius: 5%;
 }
