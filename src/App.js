@@ -100,7 +100,7 @@ function App() {
 
         </div>
         <div className="view-container">
-          {groceries.length>=0&& <>
+          {groceries.length>0&& <>
           <div className="table-responsive">
           <table className="table">
               <thead>
@@ -123,7 +123,7 @@ function App() {
             <button className="btn btn-danger btn-md " onClick={()=>setGroceries([])}>Remove All</button>
           </>}
           
-          {groceries.length <= 0 && <div> No groceries are added yet</div>}
+          {groceries.length < 1 && <div className='alert'> No groceries are added yet</div>}
           </div>
       </div>
      

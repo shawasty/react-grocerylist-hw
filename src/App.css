@@ -70,3 +70,9 @@ label{
 form{
   border-radius: 5%;
 }
+.alert{
+  font-weight: bolder;
+  color: red;
+  font-size: large;
+  text-align: center;
+}
