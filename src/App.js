@@ -42,16 +42,14 @@ function App() {
     setIsPurchased('false');
   }
   // delete grocery item
-    const deleteGrocery = (isPurchased)=>{
-      if(isPurchased){
-        return !isPurchased
-      }
+    const deleteGrocery = (item)=>{
+     const toggle = (setIsPurchased) ? 'true' : 'false';
      const filterGrocery = groceries.filter((element,index)=>{
-       return element.isPurchased !== isPurchased
+       return element.item !== item
      })
      setGroceries(filterGrocery)
 
-    //  console.log(toggle)
+     console.log(toggle)
     }
 
 
@@ -122,7 +120,7 @@ function App() {
             </table>
             
           </div>
-            <button className="btn btn-danger btn-md ">Remove All</button>
+            <button className="btn btn-danger btn-md " onClick={()=>setGroceries([])}>Remove All</button>
           </>}
           
           {groceries.length <= 0 && <div> No groceries are added yet</div>}
