@@ -1,49 +1,57 @@
 *{
     margin: 0;
     padding: 0;
+    background-color: rgb(246, 250, 249);
+
 }
 
-.wrapper{
+/* .wrapper{
      overflow-x: hidden;
     overflow-y: auto;     
-}
+} */
 
 .wrapper h1{
     margin-top: 30px;
     text-align: center;
+    color: green;
+    font-weight: bold;
 }
 
 .wrapper p{
     text-align: center;
     margin-top: 7px;
     font-weight: bold;
+    color: red;
 }
 
 .wrapper .main{
     display: flex;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
     align-items: center;
 }
 
 .wrapper .form-container{
     width: 500px;
-    height: 340px;
-    background-color: #e4e4e4;
+    height: 440px;
+    background-color: #d6e2e1;
     margin: 20px auto;
-    padding: 20px;   
+    padding: 20px;
+    border-radius: 5%;   
 }
 
 .wrapper .form-container .btn{
-    width: 100%;   
+    width: 100%;  
 }
 
 .wrapper .view-container{
     width: 600px;    
-    background-color: #e4e4e4;
+    background-color: #fae8e8;
     margin: 20px auto;
     padding: 20px;
     display: flex;
     flex-direction: column;
+    border-radius: 5%;
 }
 
 .delete-btn{
